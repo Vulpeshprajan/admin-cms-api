@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 const saltRounds = 10;
 
 export const hashPassword = plainPass => {
-    const hash = bcrypt.hashSync(plainPass, saltRounds);
+  return  bcrypt.hashSync(plainPass, saltRounds);
 
 
 };
