@@ -11,3 +11,21 @@ try {
 }
 
 }
+
+
+export const verifyEmail = email => {
+try {
+    const result = UserSchema.findOneAndUpdate(
+        { email },
+        { isemailConfirm: true },
+        { new: true }
+    );
+    console.log(result)
+    return result;
+} catch (error) {
+    throw new Error(error)
+    
+}
+
+
+}
